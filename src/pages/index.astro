@@ -1,43 +1,41 @@
 ---
 import MainLayout from "@layouts/MainLayout.astro"
 import Avatar from "@components/Avatar.astro"
-import FeaturedCardsLayout from "@layouts/FeaturedCardsLayout.astro"
-import FeaturedCard from "@components/FeaturedCard.astro"
+import Icon from "astro-icon"
 import LinksLayout from "@layouts/LinksLayout.astro"
 import Link from "@components/Link.astro"
 import Social from "@components/Social.astro"
 ---
 
-<MainLayout title='Astro LinkTree Clone'>
+<MainLayout title="Sylvain's tree">
   <Avatar />
-  <FeaturedCardsLayout>
-    <FeaturedCard
-      featuredCardIcon='logos:patreon'
-      featuredCardTitle='Support Us!'
-      featuredCardLink='https://www.patreon.com/stefanrows'
-    />
-    <FeaturedCard
-      featuredCardIcon='logos:discord-icon'
-      featuredCardTitle='Join the Community!'
-      featuredCardLink='https://www.discord.com'
-    />
-  </FeaturedCardsLayout>
+  <p class="text-white bg-gray-500 rounded p-2 bg-opacity-30 text-center">
+    Hello and Welcome to my Linktree made with 
+    <img src="/logos--astro.svg" alt="Astro logo" class="inline h-6 w-auto" /><br>
+    You'll find all my links here, so feel free to explore!
+  </p>
+
   <LinksLayout>
+   
     <Link
-      linkTitle='🧑‍🚀 Astro'
-      linkDescription='Astro Homepage'
-      linkUrl='https://www.astro.build'
-    />
-    <Link
-      linkTitle='🌍 My Portfolio'
+
+      linkTitle=' My Portfolio'
+      linkLogo='perso.png'
       linkDescription='Look at my portfolio!'
-      linkUrl='https://www.stefanrows.com'
+      linkUrl='#'
     />
     <Link
-      linkTitle='🎥 YouTube'
-      linkDescription='Visit my YouTube channel!'
-      linkUrl='https://www.youtube.com/c/stefanrows'
-    />
+      linkTitle='My IG'
+      linkLogo=''
+      linkDescription='Read my blog'
+      linkUrl='#'
+
+    <Link
+    linkTitle='Astro'
+    linkLogo='/logos--astro.svg'
+    linkDescription='If you want to read some documentation '
+    linkUrl='https://www.astro.build'
+  />
   </LinksLayout>
-  <Social />
+
 </MainLayout>
